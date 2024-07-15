@@ -1,0 +1,30 @@
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    box-shadow: 0  5px  20px var(--clr-pastel-dark-blue),
+    0 5px 10px var(--clr-blue);
+    background-color: var(--clr-blue);
+    color: var(--clr-pastel-blue);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0  5px  20px var(--clr-pastel-blue),
+    0 5px 10px var(--clr-pastel-dark-blue);
+    background-color: var(--clr-pastel-blue);
+    color: var(--clr-blue);
+}
+
+.btn img {
+    background-color: transparent;
+    padding-right: 0;
+}
+
+.line-spacer {
+    border: 0.1rem solid var(--clr-light);
+    padding-top: 1em;
+}

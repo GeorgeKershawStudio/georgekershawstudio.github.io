@@ -1,0 +1,68 @@
+:root {
+    --clr-dark: #080b12;
+    --clr-light: #f2f2f2;
+    --clr-grey: #d4d4d8;
+    --clr-red: #ff3333;
+    --clr-blue: #00bfff;
+    --clr-yellow: #ffcc00;
+    --clr-pastel-red: #fecdd3;
+    --clr-pastel-blue: #bfdbfe;
+    --clr-pastel-yellow: #fde68a;
+    --clr-pastel-dark-red: #fb6a7b;
+    --clr-pastel-dark-blue: #68abfd;
+    --clr-pastel-dark-yellow: #fddf68;
+
+    --dev-border-red: transparent;
+    --dev-border-blue: transparent;
+}
+
+* {
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+button {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.body-container {
+    display: flex;
+    margin-top: 2rem;
+    border: 0.1rem solid var(--dev-border-red);
+    padding: 0.5em;
+}
+
+.body-container * {
+    border: 0.1rem solid var(--dev-border-blue);
+}
+
+.hero-section {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+}
+
+.header * {
+    margin: 0 1em;
+}
+
+.header h1 {
+    text-wrap: nowrap;
+}

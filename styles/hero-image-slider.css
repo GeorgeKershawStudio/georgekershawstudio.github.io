@@ -1,0 +1,105 @@
+.hero-slider {
+    height: 40vh;
+    border: 0.1rem solid var(--dev-border-red);
+    padding: 0;
+    margin-left: 0.2rem;
+    transform: skewX(-20deg) ;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,   /* Fully transparent at the top */
+        rgba(255, 255, 255, 1) 30%,  /* Fully opaque at 20% from the top */
+        rgba(255, 255, 255, 1) 70%,  /* Fully opaque at 80% from the top */
+        rgba(255, 255, 255, 0) 100%  /* Fully transparent at the bottom */
+    );
+}
+
+.hero-images {
+    transform: skewX(20deg);
+    width: 170%;
+    height: auto;
+    filter: grayscale(80%) brightness(50%) sepia(80%) hue-rotate(-90deg) saturate(300%);
+    transition: filter 0.3s;
+}
+
+.hero-images:hover {
+    filter: grayscale(0%) brightness(100%) sepia(0%) hue-rotate(0deg) saturate(100%);
+}
+
+.hero-images:checked {
+    filter: grayscale(0%) brightness(100%) sepia(0%) hue-rotate(0deg) saturate(100%);
+}
+
+.hero-images .image-masker {
+    transform: translate(-50%) scale(1.5);
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 10%;
+    rotate: -20deg;
+}
+
+.image-masker {
+    height: 5rem;
+    overflow: hidden;
+    align-items: center;
+}
+
+.image-masker img {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.hero-images {
+    animation: slide 30s linear infinite;
+}
+
+.hero-offset-anim {
+    animation: slide-offset 30s linear infinite;
+}
+
+.hero-reverse-anim {
+    animation: slide-reverse 30s linear infinite;
+}
+
+.hero-reverse-offset-anim {
+    animation: slide-reverse-offset 30s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0%) skewY(20deg);
+    }
+    100% {
+        transform: translateY(calc(calc(-100% / 3) + 0%)) skewY(20deg);
+    }
+}
+
+@keyframes slide-offset {
+    0% {
+        transform: translateY(-10%) skewY(20deg);
+    }
+    100% {
+        transform: translateY(calc(calc(-100% / 3) - 10%)) skewY(20deg);
+    }
+}
+
+@keyframes slide-reverse {
+    0% {
+        transform: translateY(calc(calc(-100% / 3) + 0%)) skewY(20deg);
+    }
+    100% {
+        transform: translateY(0%) skewY(20deg);
+    }
+}
+
+@keyframes slide-reverse-offset {
+    0% {
+        transform: translateY(calc(calc(-100% / 3) - 10%)) skewY(20deg);
+    }
+    100% {
+        transform: translateY(-10%) skewY(20deg);
+    }
+}
