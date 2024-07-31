@@ -3,19 +3,24 @@
   <head>
     <!-- vite command = npm run dev -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/SquidoStudio-Squid-Logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev server</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="body-container">
       <div class="header">
-        <h1>George Kershaw</h1>
+        <svg class="header-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.69 88.88">
+          <path d="M172.47,49h-27.6l53.9-49H171V1.78c1.53,0,7.64,1.28,7.64,7.39,0,3.82-2.42,6.87-4.08,8.52L173,19.1,142.62,47l-2.27,2H87.48C69.26,26.69,76.12,2.29,103.34,2.29c16.42,0,28.8,11.37,38.28,22.71H143V0H101.28c-22.13,0-43.5,16.54-43.5,43.91A47.1,47.1,0,0,0,58.05,49H0v4H58.45c4,22.46,24.41,35.88,41.87,35.88,18.83,0,25.15-12.58,26.16-17.88h.62c3,7.68,4.66,12,6.8,17H143V51.7l2.46-2.5L172.35,88h27.34ZM89.78,52H123c0,7.2.12,21.1.12,22.24C108.4,68.11,97.37,60.26,89.78,52Z"/>
+        </svg>
         <p class="line-spacer"></p>
         <button>hello</button>
         <button>hi</button>
         <button class="btn">
-          <img src="/vite.svg" alt="">        
+          <img src="/SquidoStudio-Squid-Logo.svg">        
         </button>
       </div>
     </div>
@@ -63,6 +68,43 @@
       </div>
     </div>
 
+    <div class="body-container">
+      <h2 class="body-title">Main Content</h2>
+      <div class="text-content">
+        <h3 class="body-subtitle">Paragraph 1</h3>
+        <p class="body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi dignissimos ea soluta beatae, tempora impedit quam aliquid. Culpa enim reprehenderit distinctio dolor aspernatur ipsa. Ipsum rerum hic nisi ducimus.</p>
+      </div>
+      <div class="text-content">
+        <h3 class="body-subtitle">Paragraph 1</h3>
+        <p class="body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi dignissimos ea soluta beatae, tempora impedit quam aliquid. Culpa enim reprehenderit distinctio dolor aspernatur ipsa. Ipsum rerum hic nisi ducimus.</p>
+      </div>
+      <div class="text-content">
+        <h3 class="body-subtitle">Paragraph 1</h3>
+        <p class="body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi dignissimos ea soluta beatae, tempora impedit quam aliquid. Culpa enim reprehenderit distinctio dolor aspernatur ipsa. Ipsum rerum hic nisi ducimus.</p>
+      </div>
+    </div>
+
+    <div class="body-container">
+      <h2 class="body-title">Main Content</h2>
+      <div class="text-content">
+        <h3 class="body-subtitle">Paragraph 1</h3>
+        <p class="body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi dignissimos ea soluta beatae, tempora impedit quam aliquid. Culpa enim reprehenderit distinctio dolor aspernatur ipsa. Ipsum rerum hic nisi ducimus.</p>
+      </div>
+      <div class="text-content">
+        <h3 class="body-subtitle">Paragraph 1</h3>
+        <p class="body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi dignissimos ea soluta beatae, tempora impedit quam aliquid. Culpa enim reprehenderit distinctio dolor aspernatur ipsa. Ipsum rerum hic nisi ducimus.</p>
+      </div>
+      <div class="text-content">
+        <h3 class="body-subtitle">Paragraph 1</h3>
+        <p class="body-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sequi dignissimos ea soluta beatae, tempora impedit quam aliquid. Culpa enim reprehenderit distinctio dolor aspernatur ipsa. Ipsum rerum hic nisi ducimus.</p>
+      </div>
+    </div>
+    <footer>
+      &copy; 2019 - &nbsp;<span id="currentYear"></span>&nbsp; George Kershaw. All Rights Reserved.
+    </footer>
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

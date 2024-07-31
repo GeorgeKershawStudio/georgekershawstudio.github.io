@@ -57,6 +57,7 @@ button {
 
 .header {
     display: flex;
+    background-attachment: scroll;
 }
 
 .header * {
@@ -65,4 +66,29 @@ button {
 
 .header h1 {
     text-wrap: nowrap;
+}
+
+.header .header-logo {
+    width: 10%;
+    height: auto;
+    fill: var(--clr-light);
+}
+
+footer {
+    display: flex;
+    height: 15vh;
+    padding: 5em;
+    margin-top: 3em;
+    justify-content: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, var(--clr-dark-blue) 0%, rgba(0,0,0,1) 100%);
+    color: var(--clr-pastel-blue);
+}
+
+footer * {
+    color: var(--clr-pastel-blue);
+}
+
+footer span {
+    background-color: transparent;
 }

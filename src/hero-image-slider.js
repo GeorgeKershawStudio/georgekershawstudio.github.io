@@ -4,7 +4,7 @@ function duplicateContainers() {
     duplicatedContainers.innerHTML = '';
 
     const screenWidth = window.innerWidth;
-    const numberOfContainers = Math.floor(screenWidth / 150);
+    const numberOfContainers = Math.floor(screenWidth / 200);
 
     const imageSets = [
         ["/IrnBru-Leith-Agency-Design.jpg", 

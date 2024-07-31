@@ -1,5 +1,5 @@
 .hero-slider {
-    height: 40vh;
+    height: 50vh;
     border: 0.1rem solid var(--dev-border-red);
     padding: 0;
     margin-left: 0.2rem;
@@ -18,16 +18,13 @@
     transform: skewX(20deg);
     width: 170%;
     height: auto;
-    filter: grayscale(80%) brightness(50%) sepia(80%) hue-rotate(-90deg) saturate(300%);
-    transition: filter 0.3s;
+    filter: grayscale(80%) brightness(50%) sepia(80%) hue-rotate(-150deg) saturate(300%);
+    transition: filter 0.5s;
 }
 
 .hero-images:hover {
     filter: grayscale(0%) brightness(100%) sepia(0%) hue-rotate(0deg) saturate(100%);
-}
-
-.hero-images:checked {
-    filter: grayscale(0%) brightness(100%) sepia(0%) hue-rotate(0deg) saturate(100%);
+    transition-delay: 0.05s;
 }
 
 .hero-images .image-masker {
@@ -40,7 +37,7 @@
 }
 
 .image-masker {
-    height: 5rem;
+    height: 8rem;
     overflow: hidden;
     align-items: center;
 }
@@ -53,15 +50,15 @@
 }
 
 .hero-images {
-    animation: slide 30s linear infinite;
+    animation: slide 29s linear infinite;
 }
 
 .hero-offset-anim {
-    animation: slide-offset 30s linear infinite;
+    animation: slide-offset 30.5s linear infinite;
 }
 
 .hero-reverse-anim {
-    animation: slide-reverse 30s linear infinite;
+    animation: slide-reverse 29.5s linear infinite;
 }
 
 .hero-reverse-offset-anim {
