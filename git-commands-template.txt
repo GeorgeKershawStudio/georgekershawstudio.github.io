@@ -1,0 +1,33 @@
+Summary of Commands
+
+Clone Repository on Second Computer:
+
+git clone https://github.com/username/repo.git
+cd repo
+
+
+
+On Computer 1:
+
+# Edit code
+git add .
+git commit -m "Description of changes made on Computer 1"
+git push
+
+
+
+On Computer 2:
+
+git pull
+# Edit code
+git add .
+git commit -m "Description of changes made on Computer 2"
+git push
+
+
+
+Back on Computer 1:
+
+bash
+Copy code
+git pull
