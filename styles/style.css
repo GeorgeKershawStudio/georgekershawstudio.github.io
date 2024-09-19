@@ -1,6 +1,6 @@
 :root {
-    --clr-dark: #080b12;
-    --clr-light: #f2f2f2;
+    --clr-dark: #080b12; /* rgb = (8, 11, 18) */
+    --clr-light: #f2f2f2; /* rgb = (242, 242, 242) */
     --clr-grey: #d4d4d8;
     --clr-red: #ff3333;
     --clr-blue: #00bfff;
@@ -21,6 +21,7 @@
     line-height: calc(1em + 0.5rem);
     background-color: var(--clr-dark);
     color: var(--clr-light);
+    border: 1px solid var(--dev-border-red);
 }
 
 img, picture, video, canvas, svg {
