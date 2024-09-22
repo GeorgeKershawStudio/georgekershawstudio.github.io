@@ -1,89 +1,105 @@
 .portfolio-section {
     position: relative;
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
 }
 
-.portfolio-item {
+.portfolio-item, .portfolio-item-reverse {
     position: relative;
     display: flex;
-    align-items: center;
-    left: 0px;
     height: 80vh;
-    width: auto;
-    mask-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,   /* Fully transparent at the top */
-        rgba(255, 255, 255, 0.7) 50%,  /* Fully opaque at 20% from the top */
-        rgba(255, 255, 255, 0.7) 50%,
-        rgba(255, 255, 255, 0) 100%  /* Fully transparent at the bottom */
-    );
+    width: 49.9%;
 }
 
 .portfolio-item:hover .portfolio-image {
     mask-position: 0 0;
 }
 
+.portfolio-item-reverse:hover .portfolio-image {
+    mask-position: 100% 0;
+}
+
+/* image handling */
+
 .portfolio-image {
-    z-index: 1;
     position: absolute;
-    width: auto;
+    display: flex;
     height: 100%;
     overflow: hidden;
     mask-image: linear-gradient(
         to right,
-        rgba(255, 255, 255, 1) 0%,   /* Fully transparent at the top */
-        rgba(255, 255, 255, 1) 10%,  /* Fully opaque at 80% from the top */
-        rgba(255, 255, 255, 0) 100%  /* Fully transparent at the bottom */
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 10%,
+        rgba(255, 255, 255, 0) 100%
     );
-    mask-position: 100% 0;
+    mask-position: 99% 0;
     mask-size: 200% 100%;
     transition: mask-position 1.5s ease;
 }
 
+.portfolio-item-reverse .portfolio-image {
+    mask-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 10%,
+        rgba(255, 255, 255, 0) 100% 
+    );
+    mask-position: 0 0;
+}
+
 .portfolio-image-masker {
+    display: flex;
+    z-index: 1;
     width: 100%;
     overflow: hidden;
-    align-items: center;
 }
 
 .portfolio-image-masker img {
-    left: 0;
-    top: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-width: 100%;
+    min-height: 100%;
 }
 
-.content {
-    z-index: 2;
-    background-color: rgba(8, 11, 18, 0.4);
-    backdrop-filter: blur(20px);
-    border-radius: 1em;
+/* content section */
+
+.portfolio-content {
+    height: min-content;
+    width: 90%;
+    display: flex;
     margin: 10% 5%;
     padding: 0.5rem 0.5em;
-    left: 0;
-    flex-grow: 1;
-    max-width: 40%;
 }
 
-.content * {
-    background-color: transparent;
-    color: var(--clr-light);
+.portfolio-content .portfolio-text {
+    max-width: 50%;
+    background-color: rgba(8, 11, 18, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    padding: 1rem;
 }
 
-.title {
-    font-size: 24px;
-    margin: 0;
+.portfolio-text .title {
+    font-size: 2rem;
+    margin-bottom: 1em;
 }
 
-.description {
-    margin: 10px 0;
-    padding-bottom: 2em;
+.portfolio-text .description {
+    font-size: 1rem;
+    padding-left: 1em;
 }
 
 .links {
+    z-index: 3;
+    height: min-content;
+    margin-left: auto;
+    left: 0px;
     position: relative;
     display: flex;
-    justify-content: center;
 }
 
 .links a {
@@ -118,16 +134,3 @@
 
 
 
-.portfolio-reverse .portfolio-image {
-    mask-image: linear-gradient(
-        to left,
-        rgba(255, 255, 255, 1) 0%,   /* Fully transparent at the top */
-        rgba(255, 255, 255, 1) 10%,  /* Fully opaque at 80% from the top */
-        rgba(255, 255, 255, 0) 100%  /* Fully transparent at the bottom */
-    );
-    mask-position: 0 0;
-}
-
-.portfolio-reverse:hover .portfolio-image {
-    mask-position: 100% 0;
-}

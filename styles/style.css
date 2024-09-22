@@ -14,14 +14,15 @@
 
     --dev-border-red: transparent;
     --dev-border-blue: transparent;
+
+    background-color: var(--clr-dark);
 }
 
 * {
     margin: 0;
     line-height: calc(1em + 0.5rem);
-    background-color: var(--clr-dark);
+    background-color: transparent;
     color: var(--clr-light);
-    border: 1px solid var(--dev-border-red);
 }
 
 img, picture, video, canvas, svg {
@@ -51,7 +52,8 @@ button {
 }
 
 .hero-section {
-    width: 100%;
+    display: flex;
+    width: 120%;
     overflow: hidden;
     padding: 0;
 }
@@ -78,16 +80,10 @@ button {
 footer {
     display: flex;
     height: 15vh;
+    width: auto;
     padding: 5em;
     margin-top: 3em;
     justify-content: center;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, var(--clr-dark-blue) 0%, rgba(0,0,0,1) 100%);
-    color: var(--clr-pastel-blue);
-}
-
-footer * {
-    color: var(--clr-pastel-blue);
 }
 
 footer span {

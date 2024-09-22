@@ -50,15 +50,15 @@
 }
 
 .hero-images {
-    animation: slide 29s linear infinite;
+    animation: slide 30s linear infinite;
 }
 
 .hero-offset-anim {
-    animation: slide-offset 30.5s linear infinite;
+    animation: slide-offset 30s linear infinite;
 }
 
 .hero-reverse-anim {
-    animation: slide-reverse 29.5s linear infinite;
+    animation: slide-reverse 30s linear infinite;
 }
 
 .hero-reverse-offset-anim {
