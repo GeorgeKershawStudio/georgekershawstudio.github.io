@@ -1,5 +1,6 @@
 .hero-slider {
     height: 50vh;
+    width: 300px;
     border: 0.1rem solid var(--dev-border-red);
     padding: 0;
     margin-left: 0.2rem;
@@ -7,10 +8,10 @@
     overflow: hidden;
     mask-image: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0) 0%,   /* Fully transparent at the top */
-        rgba(255, 255, 255, 1) 30%,  /* Fully opaque at 20% from the top */
-        rgba(255, 255, 255, 1) 70%,  /* Fully opaque at 80% from the top */
-        rgba(255, 255, 255, 0) 100%  /* Fully transparent at the bottom */
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 30%,
+        rgba(255, 255, 255, 1) 70%,
+        rgba(255, 255, 255, 0) 100%
     );
 }
 

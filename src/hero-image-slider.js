@@ -13,12 +13,12 @@ function duplicateContainers() {
             "/Portfolio-Template-Img.jpg", 
             "/IrnBru-Leith-Agency-Design.jpg", 
             "/Portfolio-Template-Img.jpg", ],
-        ["/IrnBru-Leith-Agency-Design.jpg", 
-            "/Portfolio-Template-Img.jpg", 
+        ["/IrnBru-Leith-Agency-Design.jpg",
+            "/War-of-the-Worlds-Album-Graphic.png",
             "/IrnBru-Leith-Agency-Design.jpg", 
-            "/Portfolio-Template-Img.jpg", 
+            "/War-of-the-Worlds-Album-Graphic.png",
             "/IrnBru-Leith-Agency-Design.jpg", 
-            "/Portfolio-Template-Img.jpg", ]
+            "/War-of-the-Worlds-Album-Graphic.png", ]
     ];
 
     for (let i = 0; i < numberOfContainers; i++) {
