@@ -1,3 +1,59 @@
+.hero-section {
+    position: relative;
+    display: flex;
+    width: 120%;
+    overflow: hidden;
+    padding: 0;
+    top: 1vh;
+}
+
+.hero-title {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    font-size: 5rem;
+    font-weight: 200;
+    left: 10%;
+    top: 40%;
+    user-select: none;
+    text-wrap: nowrap;
+}
+
+span {
+    z-index: 10;
+    font: inherit;
+}
+
+@keyframes typing {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes untyping {
+    from { width: 100%; }
+    to { width: 0%; }
+}
+
+.typing-text {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    animation: typing 6s steps(30, end), untyping 6s steps(30, end) 4s infinite;
+}
+
+@keyframes cycle-words {
+    0%, 33% { content: "a Passion"; }
+    34%, 66% { content: "a Joy"; }
+    67%, 100% { content: "a creator"; }
+}
+
+.typing-text::before {
+    content: "a developer";
+    animation: cycle-words 6s infinite;
+}
+
 .hero-slider {
     height: 50vh;
     width: 300px;
@@ -31,6 +87,7 @@
 .hero-images .image-masker {
     transform: translate(-50%) scale(1.5);
     position: relative;
+    left: 30%;
     display: block;
     width: 100%;
     margin-bottom: 10%;

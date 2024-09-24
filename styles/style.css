@@ -32,6 +32,12 @@ img, picture, video, canvas, svg {
     -webkit-user-drag: none;
 }
 
+section {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
 button {
     display: inline-block;
     padding: 0;
@@ -51,29 +57,37 @@ button {
     border: 0.1rem solid var(--dev-border-blue);
 }
 
-.hero-section {
-    display: flex;
-    width: 120%;
-    overflow: hidden;
-    padding: 0;
-}
-
-.header {
+header {
     display: flex;
     background-attachment: scroll;
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    z-index: 100;
+    background-color: rgba(8, 11, 18, 0.5);
+    backdrop-filter: blur(10px);
 }
 
-.header * {
-    margin: 0 1em;
+header .line-spacer {
+    height: 80%;
+    margin: auto;
+    margin-left: 3rem;
 }
 
-.header h1 {
+header button {
+    margin: auto 5px;
+}
+
+header h1 {
     text-wrap: nowrap;
+    margin: auto;
 }
 
-.header .header-logo {
-    width: 10%;
-    height: auto;
+header .header-logo {
+    height: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1vw;
     fill: var(--clr-light);
 }
 

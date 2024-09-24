@@ -82,11 +82,25 @@
 .portfolio-text .title {
     font-size: 2rem;
     margin-bottom: 1em;
+    font-weight: 600;
 }
 
 .portfolio-text .description {
     font-size: 1rem;
     padding-left: 1em;
+}
+
+.portfolio-text .credit {
+    font-size: 0.75rem;
+    text-wrap: nowrap;
+    margin-top: 1em;
+    opacity: 50%;
+}
+
+.portfolio-text .credit-link {
+    font-size: 1em;
+    text-wrap: nowrap;
+    text-decoration: solid;
 }
 
 .links {
