@@ -15,19 +15,63 @@ header .line-spacer {
   margin-left: 3rem;
 }
 
-header .links {
+.header-links {
   display: flex;
-  width: 50%;
-  right: auto;
-  left: auto;
+  flex: 1;
   height: 100%;
   align-items: center;
+  justify-content: space-evenly;
 }
 
-header .links button {
+.header-btn-container {
   display: flex;
-  flex: 0.1;
+  width: 100%;
+  justify-content: center;
+  margin-left: 5em;
+}
+
+.header-btn-text {
+  display: flex;
   height: min-content;
+  padding: 1em;
+  font-size: 1em;
+  transition: font-weight 0.5s, font-size 0.5s;
+}
+
+.header-btn-container:hover .header-btn-text {
+  font-weight: 800;
+  font-size: 1.5em;
+  animation: font-change 1s infinite;
+}
+
+@keyframes font-change {
+  0% {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  10% {
+    transform: skewY(1em);
+  }
+  20% {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  30% {
+    transform: skewY(0em);
+  }
+  40% {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  50% {
+    transform: skewY(0.1em);
+  }
+  60% {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  80% {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  100% {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
 }
 
 header h1 {
