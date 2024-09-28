@@ -10,7 +10,7 @@
 .portfolio-item, .portfolio-item-reverse {
     position: relative;
     display: flex;
-    height: min-content;
+    height: auto;
     width: 49.9%;
 }
 

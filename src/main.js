@@ -7,3 +7,4 @@ import '../styles/portfolio-section.css'
 import '../styles/header.css'
 
 import './hero-image-slider.js'
+import './hero-title-cycler.js'

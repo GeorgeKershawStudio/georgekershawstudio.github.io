@@ -1,160 +1,344 @@
+.hero-expander {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+
 .hero-section {
-    position: relative;
-    display: flex;
-    width: 120%;
-    overflow: hidden;
-    padding: 0;
-    top: 1vh;
+  position: relative;
+  display: flex;
+  width: auto;
+  overflow: hidden;
+  padding: 0;
+  top: 1vh;
 }
 
 .hero-title {
-    display: flex;
-    position: absolute;
-    z-index: 10;
-    font-size: 5rem;
-    font-weight: 200;
-    left: 10%;
-    top: 40%;
-    user-select: none;
-    text-wrap: nowrap;
+  display: flex;
+  position: absolute;
+  padding-left: 30%;
+  padding-top: 8%;
+  z-index: 10;
+  font-size: 4vw;
+  font-weight: 200;
+  user-select: none;
+  text-wrap: nowrap;
+  pointer-events: none;
 }
 
 span {
-    z-index: 10;
-    font: inherit;
+  z-index: 10;
+  font: inherit;
 }
 
 @keyframes typing {
-    from { width: 0%; }
-    to { width: 100%; }
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes untyping {
-    from { width: 100%; }
-    to { width: 0%; }
-}
+  from {
+    width: 100%;
+  }
 
-.typing-text {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    border-right: 2px solid white;
-    white-space: nowrap;
-    animation: typing 6s steps(30, end), untyping 6s steps(30, end) 4s infinite;
-}
-
-@keyframes cycle-words {
-    0%, 33% { content: "a Passion"; }
-    34%, 66% { content: "a Joy"; }
-    67%, 100% { content: "a creator"; }
+  to {
+    width: 0%;
+  }
 }
 
 .typing-text::before {
-    content: "a developer";
-    animation: cycle-words 6s infinite;
+  content: "";
+  animation: cycle-words 10s infinite;
 }
 
 .hero-slider {
-    height: 50vh;
-    width: 300px;
-    border: 0.1rem solid var(--dev-border-red);
-    padding: 0;
-    margin-left: 0.2rem;
-    transform: skewX(-20deg) ;
-    overflow: hidden;
-    mask-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 1) 30%,
-        rgba(255, 255, 255, 1) 70%,
-        rgba(255, 255, 255, 0) 100%
-    );
+  height: 50vh;
+  width: fit-content;
+  border: 0.1rem solid var(--dev-border-red);
+  padding: 0;
+  margin-left: 0.2rem;
+  transform: skewX(-20deg);
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(255, 255, 255, 1) 70%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 .hero-images {
-    transform: skewX(20deg);
-    width: 170%;
-    height: auto;
-    filter: grayscale(80%) brightness(50%) sepia(80%) hue-rotate(-150deg) saturate(300%);
-    transition: filter 0.5s;
+  transform: skewX(20deg);
+  width: 170%;
+  height: auto;
+  filter: grayscale(80%) brightness(50%) sepia(80%) hue-rotate(-150deg) saturate(300%);
+  transition: filter 0.5s;
 }
 
 .hero-images:hover {
-    filter: grayscale(0%) brightness(100%) sepia(0%) hue-rotate(0deg) saturate(100%);
-    transition-delay: 0.05s;
+  filter: grayscale(0%) brightness(100%) sepia(0%) hue-rotate(0deg) saturate(100%);
+  transition-delay: 0.05s;
 }
 
 .hero-images .image-masker {
-    transform: translate(-50%) scale(1.5);
-    position: relative;
-    left: 30%;
-    display: block;
-    width: 100%;
-    margin-bottom: 10%;
-    rotate: -20deg;
+  transform: translate(-50%) scale(1.5);
+  position: relative;
+  left: 30%;
+  display: block;
+  width: 100%;
+  margin-bottom: 10%;
+  rotate: -20deg;
 }
 
 .image-masker {
-    height: 12rem;
-    overflow: hidden;
-    align-items: center;
+  height: 12rem;
+  overflow: hidden;
+  align-items: center;
 }
 
 .image-masker img {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
 }
 
 .hero-images {
-    animation: slide 30s linear infinite;
+  animation: slide 30s linear infinite;
 }
 
 .hero-offset-anim {
-    animation: slide-offset 30s linear infinite;
+  animation: slide-offset 30s linear infinite;
 }
 
 .hero-reverse-anim {
-    animation: slide-reverse 30s linear infinite;
+  animation: slide-reverse 30s linear infinite;
 }
 
 .hero-reverse-offset-anim {
-    animation: slide-reverse-offset 30s linear infinite;
+  animation: slide-reverse-offset 30s linear infinite;
 }
 
 @keyframes slide {
-    0% {
-        transform: translateY(0%) skewY(20deg);
-    }
-    100% {
-        transform: translateY(calc(calc(-100% / 3) + 0%)) skewY(20deg);
-    }
+  0% {
+    transform: translateY(0%) skewY(20deg);
+  }
+
+  100% {
+    transform: translateY(calc(calc(-100% / 3) + 0%)) skewY(20deg);
+  }
 }
 
 @keyframes slide-offset {
-    0% {
-        transform: translateY(-10%) skewY(20deg);
-    }
-    100% {
-        transform: translateY(calc(calc(-100% / 3) - 10%)) skewY(20deg);
-    }
+  0% {
+    transform: translateY(-10%) skewY(20deg);
+  }
+
+  100% {
+    transform: translateY(calc(calc(-100% / 3) - 10%)) skewY(20deg);
+  }
 }
 
 @keyframes slide-reverse {
-    0% {
-        transform: translateY(calc(calc(-100% / 3) + 0%)) skewY(20deg);
-    }
-    100% {
-        transform: translateY(0%) skewY(20deg);
-    }
+  0% {
+    transform: translateY(calc(calc(-100% / 3) + 0%)) skewY(20deg);
+  }
+
+  100% {
+    transform: translateY(0%) skewY(20deg);
+  }
 }
 
 @keyframes slide-reverse-offset {
-    0% {
-        transform: translateY(calc(calc(-100% / 3) - 10%)) skewY(20deg);
-    }
-    100% {
-        transform: translateY(-10%) skewY(20deg);
-    }
+  0% {
+    transform: translateY(calc(calc(-100% / 3) - 10%)) skewY(20deg);
+  }
+
+  100% {
+    transform: translateY(-10%) skewY(20deg);
+  }
+}
+
+@keyframes cycle-words {
+  /* "a Passion" (Typing) */
+  0% {
+    content: "";
+  }
+  0.7% {
+    content: "a";
+  }
+  1.6% {
+    content: "a ";
+  }
+  2.8% {
+    content: "a P";
+  }
+  4.2% {
+    content: "a Pa";
+  }
+  5.6% {
+    content: "a Pas";
+  }
+  7% {
+    content: "a Pass";
+  }
+  8.1% {
+    content: "a Passi";
+  }
+  9.3% {
+    content: "a Passio";
+  }
+  10.5% {
+    content: "a Passion";
+  }
+
+  /* "a Passion" (Untyping) */
+  11.6% {
+    content: "a Passion";
+  }
+  12.8% {
+    content: "a Passio";
+  }
+  14% {
+    content: "a Passi";
+  }
+  15.1% {
+    content: "a Pass";
+  }
+  16.3% {
+    content: "a Pas";
+  }
+  17.4% {
+    content: "a Pa";
+  }
+  18.6% {
+    content: "a P";
+  }
+  19.8% {
+    content: "a ";
+  }
+  20.9% {
+    content: "a";
+  }
+  22.1% {
+    content: "";
+  }
+
+  /* "a Joy" (Typing) */
+  23.3% {
+    content: "";
+  }
+  24.4% {
+    content: "a";
+  }
+  25.6% {
+    content: "a ";
+  }
+  27.9% {
+    content: "a J";
+  }
+  30.2% {
+    content: "a Jo";
+  }
+  32.6% {
+    content: "a Joy";
+  }
+
+  /* "a Joy" (Untyping) */
+  34.9% {
+    content: "a Joy";
+  }
+  37.2% {
+    content: "a Jo";
+  }
+  39.5% {
+    content: "a J";
+  }
+  41.9% {
+    content: "a ";
+  }
+  44.2% {
+    content: "a";
+  }
+  46.5% {
+    content: "";
+  }
+
+  /* "a Lifestyle" (Typing) */
+  48.8% {
+    content: "";
+  }
+  51.2% {
+    content: "a";
+  }
+  53.5% {
+    content: "a ";
+  }
+  55.8% {
+    content: "a L";
+  }
+  58.1% {
+    content: "a Li";
+  }
+  60.5% {
+    content: "a Lif";
+  }
+  62.8% {
+    content: "a Life";
+  }
+  65.1% {
+    content: "a Lifes";
+  }
+  67.4% {
+    content: "a Lifest";
+  }
+  69.8% {
+    content: "a Lifesty";
+  }
+  72.1% {
+    content: "a Lifestyl";
+  }
+  74.4% {
+    content: "a Lifestyle";
+  }
+
+  /* "a Lifestyle" (Untyping) */
+  76.7% {
+    content: "a Lifestyle";
+  }
+  79.1% {
+    content: "a Lifestyl";
+  }
+  81.4% {
+    content: "a Lifesty";
+  }
+  83.7% {
+    content: "a Lifest";
+  }
+  86% {
+    content: "a Lifest";
+  }
+  88.4% {
+    content: "a Lif";
+  }
+  90.7% {
+    content: "a Li";
+  }
+  93% {
+    content: "a L";
+  }
+  95.3% {
+    content: "a ";
+  }
+  97.7% {
+    content: "a";
+  }
+  100% {
+    content: "";
+  }
 }
