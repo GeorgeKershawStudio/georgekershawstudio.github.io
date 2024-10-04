@@ -41,7 +41,7 @@ header .line-spacer {
 
 .header-btn-container:hover .header-btn-text {
   font-weight: 800;
-  font-size: 1.8em;
+  font-size: 1.7em;
   animation: font-change 1s infinite;
 }
 
@@ -54,25 +54,31 @@ header .line-spacer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   10% {
-    transform: skewY(1em);
+    font-style: oblique;
   }
   20% {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   30% {
-    transform: skewY(0em);
+    font-style: normal;
   }
   40% {
     font-family: 'Times New Roman', Times, serif;
   }
   50% {
-    transform: skewY(0.1em);
+    font-style: oblique;
   }
   60% {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
+  70% {
+    font-style: normal;
+  }
   80% {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  90% {
+    font-style: oblique;
   }
   100% {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -84,5 +90,6 @@ header .header-logo {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 1vw;
+  margin-right: 10vw;
   fill: var(--clr-light);
 }

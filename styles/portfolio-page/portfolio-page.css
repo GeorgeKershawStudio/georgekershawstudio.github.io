@@ -1,0 +1,40 @@
+.portfolio-page-hero {
+  display: flex;
+  overflow: hidden;
+  width: 200vw;
+  height: 50vh;
+}
+
+.portfolio-page-hero-container {
+  display: flex;
+  width: 100%;
+  transform: translateX(-20%);
+  animation: portfolio-page-hero-slider 5s linear infinite;
+}
+
+@keyframes portfolio-page-hero-slider {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+.portfolio-page-image-masker {
+  display: flex;
+  width: max-content;
+  overflow: hidden;
+  height: 100%;
+}
+
+.portfolio-page-image-masker img {
+  width: auto;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.portfolio-page-image-masker:nth-child(even) img {
+  transform: scaleX(-100%);
+}

@@ -2,7 +2,8 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
+  justify-content: center;
 }
 
 .hero-section {
@@ -17,7 +18,7 @@
 .hero-title {
   display: flex;
   position: absolute;
-  padding-left: 30%;
+  width: 10em;
   padding-top: 8%;
   z-index: 10;
   font-size: 4vw;
@@ -164,181 +165,4 @@ span {
   }
 }
 
-@keyframes cycle-words {
-  /* "a Passion" (Typing) */
-  0% {
-    content: "";
-  }
-  0.7% {
-    content: "a";
-  }
-  1.6% {
-    content: "a ";
-  }
-  2.8% {
-    content: "a P";
-  }
-  4.2% {
-    content: "a Pa";
-  }
-  5.6% {
-    content: "a Pas";
-  }
-  7% {
-    content: "a Pass";
-  }
-  8.1% {
-    content: "a Passi";
-  }
-  9.3% {
-    content: "a Passio";
-  }
-  10.5% {
-    content: "a Passion";
-  }
-
-  /* "a Passion" (Untyping) */
-  11.6% {
-    content: "a Passion";
-  }
-  12.8% {
-    content: "a Passio";
-  }
-  14% {
-    content: "a Passi";
-  }
-  15.1% {
-    content: "a Pass";
-  }
-  16.3% {
-    content: "a Pas";
-  }
-  17.4% {
-    content: "a Pa";
-  }
-  18.6% {
-    content: "a P";
-  }
-  19.8% {
-    content: "a ";
-  }
-  20.9% {
-    content: "a";
-  }
-  22.1% {
-    content: "";
-  }
-
-  /* "a Joy" (Typing) */
-  23.3% {
-    content: "";
-  }
-  24.4% {
-    content: "a";
-  }
-  25.6% {
-    content: "a ";
-  }
-  27.9% {
-    content: "a J";
-  }
-  30.2% {
-    content: "a Jo";
-  }
-  32.6% {
-    content: "a Joy";
-  }
-
-  /* "a Joy" (Untyping) */
-  34.9% {
-    content: "a Joy";
-  }
-  37.2% {
-    content: "a Jo";
-  }
-  39.5% {
-    content: "a J";
-  }
-  41.9% {
-    content: "a ";
-  }
-  44.2% {
-    content: "a";
-  }
-  46.5% {
-    content: "";
-  }
-
-  /* "a Lifestyle" (Typing) */
-  48.8% {
-    content: "";
-  }
-  51.2% {
-    content: "a";
-  }
-  53.5% {
-    content: "a ";
-  }
-  55.8% {
-    content: "a L";
-  }
-  58.1% {
-    content: "a Li";
-  }
-  60.5% {
-    content: "a Lif";
-  }
-  62.8% {
-    content: "a Life";
-  }
-  65.1% {
-    content: "a Lifes";
-  }
-  67.4% {
-    content: "a Lifest";
-  }
-  69.8% {
-    content: "a Lifesty";
-  }
-  72.1% {
-    content: "a Lifestyl";
-  }
-  74.4% {
-    content: "a Lifestyle";
-  }
-
-  /* "a Lifestyle" (Untyping) */
-  76.7% {
-    content: "a Lifestyle";
-  }
-  79.1% {
-    content: "a Lifestyl";
-  }
-  81.4% {
-    content: "a Lifesty";
-  }
-  83.7% {
-    content: "a Lifest";
-  }
-  86% {
-    content: "a Lifest";
-  }
-  88.4% {
-    content: "a Lif";
-  }
-  90.7% {
-    content: "a Li";
-  }
-  93% {
-    content: "a L";
-  }
-  95.3% {
-    content: "a ";
-  }
-  97.7% {
-    content: "a";
-  }
-  100% {
-    content: "";
-  }
-}
+@keyframes cycle-words {}

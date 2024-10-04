@@ -1,0 +1,39 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 80vh;
+  width: 100vw;
+  background-color: var(--clr-grey);
+  padding: 2em;
+  margin-top: 10vh;
+  justify-content: center;
+}
+
+.about-section * {
+  color: var(--clr-dark);
+}
+
+.about-head {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  justify-content: center;
+}
+
+.about-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  filter: blur(5px);
+  transition: filter 0.5s;
+}
+
+.about-title:hover {
+  filter: none;
+}
+
+.about-title:focus-within {
+  
+}
