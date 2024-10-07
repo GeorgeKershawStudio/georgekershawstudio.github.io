@@ -1,9 +1,10 @@
 .about-section {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   position: relative;
   height: 80vh;
-  width: 100vw;
+  width: 100%;
   background-color: var(--clr-grey);
   padding: 2em;
   margin-top: 10vh;
@@ -26,14 +27,5 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
   font-size: 3rem;
-  filter: blur(5px);
-  transition: filter 0.5s;
-}
-
-.about-title:hover {
-  filter: none;
-}
-
-.about-title:focus-within {
-  
+  transition: transform 0.5s;
 }

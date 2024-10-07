@@ -38,7 +38,6 @@ function generateKeyframes(words) {
     document.head.appendChild(styleSheet);
   }
 
-  // Example usage
-  const words = ["a Passion", "a Joy", "an Art", "a Lifestyle", "an Epitome"]; // Change this to your test words
+  const words = ["a Passion ", "a Joy ", "an Art ", "a World ", "an Experience "];
   const keyframesCss = generateKeyframes(words);
   applyKeyframes(keyframesCss);
