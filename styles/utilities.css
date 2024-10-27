@@ -1,0 +1,51 @@
+a.link {
+    font-family: var(--ff-secondary);
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    width: min-content;
+    height: min-content;
+}
+
+a.button {
+    --button-timing: 0.3s;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-xsmall);
+    text-decoration: none;
+    text-wrap: nowrap;
+    margin: 0;
+    padding: var(--size-small) 1em;
+    border: solid 0.1rem rgba(var(--clr-light), 1);
+    background-color: rgba(var(--clr-dark), 0.5);
+    backdrop-filter: blur(var(--glass-blur));
+    transition: color var(--button-timing), background-color var(--button-timing), border var(--button-timing);
+}
+
+a.button:only-child {
+    border-radius: var(--size-small);
+}
+
+a.button:first-child:not(:last-child) {
+    border-top-left-radius: var(--size-small);
+    border-bottom-left-radius: var(--size-small);
+    border-right: none;
+}
+
+a.button:last-child:not(:first-child) {
+    border-top-right-radius: var(--size-small);
+    border-bottom-right-radius: var(--size-small);
+    border-left: none;
+}
+
+a.button:not(:first-child):not(:last-child) {
+    border-left: none;
+    border-right: none;
+}
+
+a.button:hover {
+    color: rgb(var(--clr-dark));
+    background-color: rgba(var(--clr-light), 0.8);
+    border: solid 0.1rem rgba(var(--clr-light), 0.8);
+}

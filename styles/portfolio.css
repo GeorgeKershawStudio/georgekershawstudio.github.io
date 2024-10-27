@@ -1,0 +1,66 @@
+section.portfolio {
+    --portfolio-image-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 2vh;
+}
+
+section.portfolio-item {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 5vh;
+}
+
+section.portfolio-reverse {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.portfolio-image {
+    position: absolute;
+    overflow: hidden;
+    left: auto;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    border-top-left-radius: var(--portfolio-image-radius);
+    border-bottom-left-radius: var(--portfolio-image-radius);
+}
+
+section.portfolio-reverse .portfolio-image {
+    left: 0;
+    right: auto;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--portfolio-image-radius);
+    border-bottom-right-radius: var(--portfolio-image-radius);
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: fit-content;
+}
+
+.portfolio-content {
+    display: flex;
+    width: calc(100% / 3 * 2), fit-content;
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+section.portfolio-reverse .portfolio-content {
+    margin-left: auto;
+    margin-right: 20%;
+}
+
+.portfolio-button-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+}
