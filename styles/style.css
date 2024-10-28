@@ -8,6 +8,7 @@
     --clr-dev-blue: blue;
 
     /* Font Sizes */
+    --fs-xxsmall: 0.75rem;
     --fs-xsmall: 0.8rem;
     --fs-small: 0.875rem;
     --fs-medium: 1rem;
@@ -28,6 +29,7 @@
 
     /*Effect Properties*/
     --glass-blur: 3px;
+    --glass-blur-half: 1.5px;
 
     /*Document Properties*/
     background-color: rgb(var(--clr-dark));

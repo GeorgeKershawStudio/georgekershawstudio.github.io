@@ -7,10 +7,24 @@ section.portfolio {
     margin-top: 2vh;
 }
 
+.portfolio-title {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-title h2 {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-xlarge);
+}
+
 section.portfolio-item {
     display: flex;
+    overflow: hidden;
     width: 100%;
-    height: 30vh;
+    height: min-content;
     margin-left: auto;
     margin-right: 0;
     margin-bottom: 5vh;
@@ -26,7 +40,7 @@ section.portfolio-reverse {
     overflow: hidden;
     left: auto;
     right: 0;
-    width: 80%;
+    width: 90%;
     height: 100%;
     border-top-left-radius: var(--portfolio-image-radius);
     border-bottom-left-radius: var(--portfolio-image-radius);
@@ -43,19 +57,62 @@ section.portfolio-reverse .portfolio-image {
 
 .portfolio-image img {
     width: 100%;
-    height: fit-content;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(var(--translateX-value, 0)) translateY(var(--translateY-value ,0));
 }
 
 .portfolio-content {
     display: flex;
     width: calc(100% / 3 * 2), fit-content;
-    margin-left: 20%;
-    margin-right: auto;
+    height: min-content;
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-right: 0;
+    margin-bottom: 20%;
+    border-top-left-radius: var(--portfolio-image-radius);
+    border-bottom-left-radius: var(--portfolio-image-radius);
+    padding: var(--size-medium);
+    background-color: rgba(var(--clr-dark), 0.5);
+    backdrop-filter: blur(var(--glass-blur-half));
 }
 
 section.portfolio-reverse .portfolio-content {
-    margin-left: auto;
-    margin-right: 20%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--portfolio-image-radius);
+    border-bottom-right-radius: var(--portfolio-image-radius);
+    margin-left: 0;
+    margin-right: 15%;
+}
+
+.portfolio-text h3 {
+    text-wrap: nowrap;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-xlarge);
+    font-style: normal;
+    font-weight: 600;
+    
+}
+
+.portfolio-reverse .portfolio-text h3 {
+    text-align: end;
+    padding-right: var(--size-small);
+}
+
+.portfolio-text p {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-small);
+}
+
+.portfolio-text .credit {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-xsmall);
+    color: rgba(var(--clr-light), 0.75);
+}
+
+.portfolio-text span.credit {
+    text-decoration: underline;
 }
 
 .portfolio-button-container {
@@ -63,4 +120,14 @@ section.portfolio-reverse .portfolio-content {
     left: 50%;
     transform: translateX(-50%);
     bottom: 5%;
+}
+
+section.portfolio-see-more {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+section.portfolio-see-more .portfolio-button-container a.button {
+    padding-left: 52px;
+    padding-right: 52px;
 }
