@@ -8,7 +8,7 @@ section.header {
 .header-logo {
     position: fixed;
     width: fit-content;
-    padding: var(--size-xsmall);
+    margin: var(--size-small);
     z-index: 100;
 }
 

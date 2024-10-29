@@ -1,0 +1,64 @@
+section.about {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  height: min-content;
+  width: 100vw;
+  align-items: center;
+}
+
+section.about * {
+  color: rgb(var(--clr-dark));
+}
+
+section.about-title h2 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-large);
+  color: rgb(var(--clr-light));
+  margin-bottom: var(--size-small);
+}
+
+.about-item {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: min-content;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--clr-light), var(--glass-transparency));
+  backdrop-filter: blur(var(---glass-blur));
+  border-radius: var(--border-radius-medium);
+  margin-bottom: 5vh;
+}
+
+.about-content {
+  width: 100%;
+  padding: var(--size-medium);
+}
+
+h3.about-title {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-large);
+}
+
+p.about-text {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-small);
+  width: 100%;
+}
+
+.about-button-container {
+  width: min-content;
+  margin-bottom: 1rem;
+}
+
+.about-button-container a.button {
+  color: rgb(var(--clr-dark));
+  background-color: rgba(var(--clr-light), 0);
+  border-color: rgb(var(--clr-dark));
+}
+
+.about-button-container a.button:hover {
+  color: rgb(var(--clr-light));
+  background-color: rgba(var(--clr-dark), 100);
+}

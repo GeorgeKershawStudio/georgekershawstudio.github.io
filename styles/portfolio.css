@@ -1,5 +1,4 @@
 section.portfolio {
-    --portfolio-image-radius: 1rem;
     display: flex;
     overflow: hidden;
     flex-direction: column;
@@ -9,10 +8,11 @@ section.portfolio {
 
 .portfolio-title {
     display: flex;
-    height: 10vh;
+    height: min-content;
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-bottom: var(--size-small);
 }
 
 .portfolio-title h2 {
@@ -42,8 +42,8 @@ section.portfolio-reverse {
     right: 0;
     width: 90%;
     height: 100%;
-    border-top-left-radius: var(--portfolio-image-radius);
-    border-bottom-left-radius: var(--portfolio-image-radius);
+    border-top-left-radius: var(--border-radius-medium);
+    border-bottom-left-radius: var(--border-radius-medium);
 }
 
 section.portfolio-reverse .portfolio-image {
@@ -51,8 +51,8 @@ section.portfolio-reverse .portfolio-image {
     right: auto;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border-top-right-radius: var(--portfolio-image-radius);
-    border-bottom-right-radius: var(--portfolio-image-radius);
+    border-top-right-radius: var(--border-radius-medium);
+    border-bottom-right-radius: var(--border-radius-medium);
 }
 
 .portfolio-image img {
@@ -70,8 +70,8 @@ section.portfolio-reverse .portfolio-image {
     margin-top: 5%;
     margin-right: 0;
     margin-bottom: 20%;
-    border-top-left-radius: var(--portfolio-image-radius);
-    border-bottom-left-radius: var(--portfolio-image-radius);
+    border-top-left-radius: var(--border-radius-medium);
+    border-bottom-left-radius: var(--border-radius-medium);
     padding: var(--size-medium);
     background-color: rgba(var(--clr-dark), 0.5);
     backdrop-filter: blur(var(--glass-blur-half));
@@ -80,8 +80,8 @@ section.portfolio-reverse .portfolio-image {
 section.portfolio-reverse .portfolio-content {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border-top-right-radius: var(--portfolio-image-radius);
-    border-bottom-right-radius: var(--portfolio-image-radius);
+    border-top-right-radius: var(--border-radius-medium);
+    border-bottom-right-radius: var(--border-radius-medium);
     margin-left: 0;
     margin-right: 15%;
 }

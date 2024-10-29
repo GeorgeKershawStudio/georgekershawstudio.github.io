@@ -30,9 +30,16 @@
     /*Effect Properties*/
     --glass-blur: 3px;
     --glass-blur-half: 1.5px;
+    --glass-transparency: 0.8;
+    --border-radius-medium: 1rem;
 
     /*Document Properties*/
     background-color: rgb(var(--clr-dark));
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 * {
