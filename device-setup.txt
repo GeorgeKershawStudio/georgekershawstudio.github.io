@@ -1,0 +1,27 @@
+Initial Setup on new device
+
+  # 1. Clone your repo
+  git clone https://github.com/<your-username>/<your-repo>.git
+  cd <your-repo>
+
+  # 2. Fetch all branches
+  git fetch origin
+
+  # 3. Switch to your vite-site branch
+  git checkout vite-site
+
+  # 4. Install dependencies
+  npm install
+
+
+Pulling Changes 
+
+  git checkout vite-site
+  git pull origin vite-site
+
+
+Pushing Changes
+
+  git add .
+  git commit -m "Your commit message"
+  git push origin vite-site
