@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  top: 0;
+  position: sticky;
+  height: 10vh;
+  width: 100vw;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-self: center;
+
+}
+
+header div.link-container {
+  display: flex;
+  height: 10vh;
+}
+
+header a {
+  margin: 100px;
+  padding: 100px;
+}
+
+header a img {
+  
+}
