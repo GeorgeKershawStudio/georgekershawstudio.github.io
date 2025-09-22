@@ -1,4 +1,6 @@
 import '../styles/modern-normalize.css';
 import '../styles/style.css';
 import '../styles/utilities.css';
+
 import '../styles/header.css';
+import '../src/header.js';

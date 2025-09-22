@@ -4,22 +4,71 @@ header {
   position: sticky;
   height: 10vh;
   width: 100vw;
-  flex-wrap: nowrap;
+
+  align-content: center;
   align-items: center;
-  align-self: center;
+  background-color: var(--clr-light);
 
 }
 
-header div.link-container {
+header .link-container {
   display: flex;
-  height: 10vh;
-}
-
-header a {
-  margin: 100px;
-  padding: 100px;
-}
-
-header a img {
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0.1rem;
   
+  border: 0.1rem solid var(--dev-border-red);
+}
+
+header .link-container a {
+  height: 100%;
+  left: 0;
+  flex: 1;
+  color: var(--clr-dark);
+  text-decoration: none;
+  justify-content: center;
+}
+
+header * a.logo img {
+  height: 100%;
+  padding: 0;
+  margin: auto;
+}
+
+.header-dd-btn {
+  height: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--clr-dark);
+  cursor: pointer;
+}
+
+/* Menu styling */
+.header-dd {
+  display: none;                 /* hidden by default */
+  position: absolute;
+  top: 100%; left: 0;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  height: 1em;
+}
+
+.header-dd a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-dd a:hover {
+  background: #eee;
+}
+
+/* Show menu when "active" class added */
+.header-dd.active {
+  display: block;
 }

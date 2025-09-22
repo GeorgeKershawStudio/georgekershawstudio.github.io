@@ -12,10 +12,12 @@
     --clr-pastel-dark-blue: #619adf;
     --clr-pastel-dark-yellow: #ebd063;
 
-    --dev-border-red: transparent;
-    --dev-border-blue: transparent;
+    --dev-border-red: red;
+    --dev-border-blue: cyan;
 
     background-color: var(--clr-dark);
+
+    min-height: 100vh;
 }
 
 * {
@@ -23,6 +25,7 @@
     line-height: calc(1em + 0.5rem);
     background-color: transparent;
     color: var(--clr-light);
+    border: 0.1rem solid var(--dev-border-blue)
 }
 
 img, picture, video, canvas, svg {
